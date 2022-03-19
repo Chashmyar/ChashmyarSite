@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+  {% block menu %}
+  <!-- BEGIN MENU -->
+  <section id="menu-area">
+    <nav class="navbar navbar-default" role="navigation">
+{#      <div class="container">#}
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">تغییر وضعیت</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->
+          <!-- IMG BASED LOGO  -->
+            <a class="navbar-brand" href="{% url 'pages' %}" style="margin-top: 0;">
+                <picture>
+                    <source
+                      srcset="{% static 'images/Cheshmyar/dark.jpeg' %}"
+                      media="(prefers-color-scheme: dark)">
+                    <img id="logo2" style="margin-top: 0;" src="{% static 'images/Cheshmyar/logo2.png' %}" alt="logo">
+                </picture>
+
+            </a>
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="{% url 'pages' %}">
+              <span style="background: -webkit-linear-gradient(left, rgba(6,57,110,1) 0%, rgba(43,205,193,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">چشم یار</span>
+
+              &ensp;<span id="motto" style="color: rgb(6,57,110);">وضوح دید بیشتر با چشم یار</span>
+          </a>
+
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{% url 'pages' %}">صفحه اصلی</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">وب سرویس ها <span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'eye-care' %}">سلامت چشم</a></li>
+                <li><a href="{% url 'virtual-glass' %}">عینک مجازی</a></li>
+                <li><a href="{% url 'info-dashboard' %}">داشبورد اطلاعاتی</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'blog' %}">بلاگ</a></li>
+            <li><a href="{% url 'contact' %}">ارتباط با ما</a></li>
+            <li><a href="{% url 'intern' %}">پذیرش کارآموز</a></li>
+            <li><a href="{% url 'about-us' %}">درباره چشم یار</a></li>
+          </ul>
+            <a href="#" id="search-icon">
+                <i class="fa fa-search">
+                </i>
+            </a>
+        </div>
+        <!--/.nav-collapse -->
+
+{#      </div>     #}
+    </nav>
+  </section>
+  <!-- END MENU -->
+  {% endblock menu %}
+
+  {% block content %}
+
+
+
+      <!-- Start Pricing table -->
+  <section id="pricing-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">فیلتر رنگی</h2>
+            <span class="line"></span>
+            <p>لطفا عکسی را آپلود کرده و یا از عکس های پیش فرض یکی را انتخاب کنید.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div>
+	    		    <fieldset name="File Upload">
+	    		    	{% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+	    		    	<div id="msg"></div>
+	    		    	<p>
+	    		    		{% csrf_token %}
+	    		    		<input type="file" id="File" name="file"/>
+	    		    		<button id="upload" style="height: 40px">اعمال فیلتر بر روی عکس آپلودی</button>
+	    		    	</p>
+	    		    </fieldset>
+	    	    </div>
+                <div class="img-div">
+                    {% if default_list %}
+                        {% for default_4 in default_list %}
+                            <div class="row mb-3"> <!-- class="row mb-3" -->
+                              {% for default_pic in default_4 %}
+                                  <div class="col-md-3 col-sm-6 sunglasses_div">
+                                    <img src="/static/Services/colordefault/{{default_pic}}.jpg" alt="sunglasses" class="default" style="width: 100%; height: auto;">
+                                  </div>
+                              {% endfor %}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <button id="choose" style="height: 40px">اعمال فیلتر بر روی عکس پیش فرض انتخابی</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="../../../../static/Services/colorglass/{{glasses}}.jpg" alt="sunglasses" style="width: 100%; height: 230px;">
+                <div class="row mt-3" style="height: 37px">
+                    <div class="rounded-circle me-auto" style="background-color: red;   width: 12%; "></div>
+                    <div class="rounded-circle me-auto" style="background-color: green; width: 12%; "></div>
+                    <div class="rounded-circle me-auto" style="background-color: blue;  width: 12%; "></div>
+                </div>
+                <div class="mt-3" style="border: 1px solid blue; height: 300px">
+                    توضیحات عینک
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			var im_source = "";
+
+			$(document).ready(function (e) {
+				$('#upload').on('click', function () {
+					var form_data = new FormData();
+					var ins = document.getElementById('File').files.length;
+					if(ins == 0) {
+						$('#msg').html('<span style="color:red">Select at least one file</span>');
+						return;
+					}
+					form_data.append("file", document.getElementById('File').files[0]);
+					csrf_token = $('input[name="csrfmiddlewaretoken"]').val();
+					form_data.append("csrfmiddlewaretoken", csrf_token);
+
+					$.ajax({
+						url: 'upload', // point to server-side URL
+						dataType: 'json', // what to expect back from server
+						cache: false,
+						contentType: false,
+						processData: false,
+						data: form_data,
+						type: 'post',
+						success: function (response) { // display success response
+							$('#msg').html(response.img);
+						},
+						error: function (response) {
+							$('#pic').html(response.message); // display error response
+						}
+					});
+				});
+				$('.default').on('click', function () {
+					im_source = $(this).attr('src');
+					var src_to_select = 'img[src="' + im_source + '"]'
+					$('img').css("border", "none")
+					$('img').filter(src_to_select).css("border", "5px solid green");
+					$(this).css("border", "5px solid green");
+					console.log(im_source)
+				});
+				$('.rounded-circle').on('click', function () {
+					color = $(this).attr('background-color');
+					var src_to_select = '.rounded-circle[style*="background-color: ' + color + '"]'
+					$('.rounded-circle').css("border", "none")
+					$('.rounded-circle').filter(src_to_select).css("border", "5px solid black");
+					$(this).css("border", "5px solid black");
+				});
+				$('#choose').on('click', function () {
+					var form_data = new FormData();
+					if(im_source == "") {
+						$('#msg').html('<span style="color:blue">Select at least one image</span>');
+						return;
+					}
+					form_data.append("im_source", im_source);
+					csrf_token = $('input[name="csrfmiddlewaretoken"]').val();
+					form_data.append("csrfmiddlewaretoken", csrf_token);
+
+					$.ajax({
+						url: 'choose', // point to server-side URL
+						dataType: 'json', // what to expect back from server
+						cache: false,
+						contentType: false,
+						processData: false,
+						data: form_data,
+						type: 'post',
+						success: function (response) { // display success response
+							$('#msg').html(response.img);
+						},
+						error: function (response) {
+							$('#pic').html(response.message); // display error response
+						}
+					});
+				});
+			});
+		</script>
+
+  </section>
+  <!-- End Pricing table -->
+
+
+{% endblock content %}
+

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+  {% block menu %}
+  <!-- BEGIN MENU -->
+  <section id="menu-area">
+    <nav class="navbar navbar-default" role="navigation">
+{#      <div class="container">#}
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">تغییر وضعیت</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->
+          <!-- IMG BASED LOGO  -->
+            <a class="navbar-brand" href="{% url 'pages' %}" style="margin-top: 0;">
+                <picture>
+                    <source
+                      srcset="{% static 'images/Cheshmyar/dark.jpeg' %}"
+                      media="(prefers-color-scheme: dark)">
+                    <img id="logo2" style="margin-top: 0;" src="{% static 'images/Cheshmyar/logo2.png' %}" alt="logo">
+                </picture>
+
+            </a>
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="{% url 'pages' %}">
+              <span style="background: -webkit-linear-gradient(left, rgba(6,57,110,1) 0%, rgba(43,205,193,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">چشم یار</span>
+
+              &ensp;<span id="motto" style="color: rgb(6,57,110);">وضوح دید بیشتر با چشم یار</span>
+          </a>
+
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{% url 'pages' %}">صفحه اصلی</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">وب سرویس ها <span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'eye-care' %}">سلامت چشم</a></li>
+                <li><a href="{% url 'virtual-glass' %}">عینک مجازی</a></li>
+                <li><a href="{% url 'info-dashboard' %}">داشبورد اطلاعاتی</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'blog' %}">بلاگ</a></li>
+            <li><a href="{% url 'contact' %}">ارتباط با ما</a></li>
+            <li><a href="{% url 'intern' %}">پذیرش کارآموز</a></li>
+            <li><a href="{% url 'about-us' %}">درباره چشم یار</a></li>
+          </ul>
+            <a href="#" id="search-icon">
+                <i class="fa fa-search">
+                </i>
+            </a>
+        </div>
+        <!--/.nav-collapse -->
+
+{#      </div>     #}
+    </nav>
+  </section>
+  <!-- END MENU -->
+  {% endblock menu %}
+
+  {% block content %}
+
+
+
+      <!-- Start Pricing table -->
+  <section id="pricing-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">سرویس عینک مجازی</h2>
+            <span class="line"></span>
+            <p>لطفا به مرورگر خود برای وبکم دسترسی بدهید.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="d-flex justify-content-center">
+          <img src = "{% url 'video_stream' glasses=glasses %}" alt="alt">
+      </div>
+
+  </section>
+  <!-- End Pricing table -->
+
+
+{% endblock content %}
+

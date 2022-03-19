@@ -1,0 +1,1428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa_IR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>چشم یار</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="{% static 'images/Cheshmyar/logo (1).ico' %}"/>
+    <!-- Font Awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+{#    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">#}
+      <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"/>
+      <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.rtl.min.css' %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}"/>
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" type="text/css" media="screen" />
+    <!-- Animate css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}"/>
+    <!-- Progress bar  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-progressbar-3.3.4.css' %}"/>
+     <!-- Theme color -->
+    <link id="switcher" href="{% static 'css/theme-color/default-theme.css' %}" rel="stylesheet">
+
+{#      <link rel="stylesheet" href="{% static 'css/cards.css' %}">#}
+      <link rel="stylesheet" href="{% static 'Services/service-style.css' %}">
+      <link rel="stylesheet" href="{% static 'Tools/tools.css' %}">
+
+    <!-- Main Style -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+            <link href="{% static 'Blog/blog-style.css' %}" rel="stylesheet">
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+
+
+
+      <!BEGIN RAYCHAT CODE-->
+        <script type="text/javascript">!function(){function t(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,localStorage.getItem("rayToken")?t.src="https://app.raychat.io/scripts/js/"+o+"?rid="+localStorage.getItem("rayToken")+"&href="+window.location.href:t.src="https://app.raychat.io/scripts/js/"+o+"?href="+window.location.href;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}var e=document,a=window,o="e6e02741-07fa-4169-b657-b4380c8bfb7e";"complete"==e.readyState?t():a.attachEvent?a.attachEvent("onload",t):a.addEventListener("load",t,!1)}();</script>
+    <!END RAYCHAT CODE-->
+
+{#	<style>#}
+{#        html{#}
+{#            scroll-behavior: smooth;#}
+{#        }#}
+{#    </style>#}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+{#    <!--[if lt IE 9]>#}
+{#      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>#}
+{#      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>#}
+{#    <![endif]-->#}
+  </head>
+  <link rel="canonical" href="http://www.20script.ir" />
+  <body>
+  
+  <!-- BEGIN PRELOADER -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->
+
+  <!-- SCROLL TOP BUTTON -->
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+
+  <!-- Start header -->
+  <header id="header">
+    <!-- header top search -->
+    <div class="header-top">
+      <div class="container">
+        <form action="">
+          <div id="search">
+          <input type="text" placeholder="کلمه مورد نظر را نوشته و اینتر را بزنید..." name="s" id="m_search" style="display: inline-block;">
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- header bottom -->
+{#    <div class="header-bottom">#}
+{#        <div class="row">#}
+{#          <div class="col-md-6 col-sm-6 col-xs-6">#}
+{#            <div class="header-contact">#}
+{#              <ul>#}
+{#                <li>#}
+{#                  <div class="phone">#}
+{#                    <i class="fa fa-phone"></i>#}
+{#                      <a href="tel:02126744186">02126744186</a> - <a href="tel:02126744215">02126744215</a>#}
+{#                  </div>#}
+{#                </li>#}
+{#                <li>#}
+{#                  <div class="phone">#}
+{#                      <i class="fa fa-whatsapp"></i>#}
+{#                      <a href="http://wa.me/989379788868">09379788868</a>#}
+{#                  </div>#}
+{#                </li>#}
+{#                <li>#}
+{#                  <div class="mail">#}
+{#                    <i class="fa fa-envelope"></i>#}
+{#                    <a href="mailto:Chashmyar@gmail.com">Chashmyar@gmail.com</a>#}
+{#                  </div>#}
+{#                </li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="col-md-6 col-sm-6 col-xs-6">#}
+{#            <div class="header-login">#}
+{#                {% if is_logged_in is True %}#}
+{#                    <a class="login modal-form" href="{% url 'dashboard' %}">ناحیه کاربری</a>#}
+{#                    {% else %}#}
+{#              <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">ورود / عضویت</a>#}
+{#                {% endif %}#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#    </div>#}
+  </header>
+  <!-- End header -->
+
+
+
+  <!-- Begin error modal -->
+  {% if messages %}
+      {% for message in messages %}
+          <div aria-hidden="false" role="dialog" tabindex="-1" id="error-modal" class="modal leread-modal fade in">
+    <div class="modal-dialog">
+      <!-- Start login section -->
+      <div id="login-content" class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">
+              {% if message.level == 40 %}
+                  <i class="fa fa-warning"></i>اخطار
+              {% elif message.level == 25 %}
+                  <i class="fa fa-check"></i>تبریک
+              {% endif %}
+          </h4>
+        </div>
+        <div class="modal-body">
+          <h3>{{ message }}</h3>
+          {% if message.level == 40 %}
+              <h4>لطفا مجددا اقدام کنید.</h4>
+          {% elif message.level == 25 %}
+              <h4>می توانید از طریق قسمت ثبت نام و ورود ، وارد حساب کاربری خود شوید.</h4>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+          $("#error-modal").modal();
+      });
+  </script>
+      {% endfor %}
+  {% endif %}
+  <!-- End error modal -->
+
+  <!-- BEGIN MENU -->
+  <section id="menu-area">      
+{#    <nav class="navbar navbar-default d-flex" role="navigation">#}
+{#        <div>#}
+{#            <div class="navbar-header">#}
+{#          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->#}
+{#          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">#}
+{#            <span class="sr-only">تغییر وضعیت</span>#}
+{#            <span class="icon-bar"></span>#}
+{#            <span class="icon-bar"></span>#}
+{#            <span class="icon-bar"></span>#}
+{#          </button>#}
+{#          <!-- LOGO -->#}
+{#          <!-- IMG BASED LOGO  -->#}
+{#            <a class="" href="#" style="margin-top: 10px; float: right; padding-left: 7px;">#}
+{#                <!-- <picture>#}
+{#                    <source#}
+{#                      srcset="{% static 'images/Cheshmyar/dark.jpeg' %}"#}
+{#                      media="(prefers-color-scheme: dark)"> -->#}
+{#                    <img id="logo2" style="margin-top: 0;" src="{% static 'images/Cheshmyar/logo-white.png' %}" alt="logo">#}
+{#                <!-- </picture> -->#}
+{##}
+{#            </a>#}
+{#          <!-- TEXT BASED LOGO -->#}
+{#          <div class="spans" href="/" dideo-checked="true">#}
+{#            <div id="motto">وضوح دید بیشتر با</div>#}
+{#            <div id="span-first">چشم یار</div>#}
+{#          </div>#}
+{##}
+{##}
+{#        </div>#}
+{#        </div>#}
+{#      <!-- <div class="container"> -->#}
+{#        <div>#}
+{#            <div id="navbar" class="navbar-collapse collapse">#}
+{#          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">#}
+{#            <li class="active"><a href="#">صفحه اصلی</a></li>#}
+{#            <li class="dropdown">#}
+{#              <a href="#" class="dropdown-toggle" data-toggle="dropdown">وب سرویس ها <span class="fa fa-angle-down"></span></a>#}
+{#              <ul class="dropdown-menu" role="menu">#}
+{#                <li><a href="{% url 'eye-care' %}">سلامت چشم</a></li>#}
+{#                <li><a href="{% url 'virtual-glass' %}">عینک مجازی</a></li>#}
+{#                <li><a href="{% url 'info-dashboard' %}">داشبورد اطلاعاتی</a></li>#}
+{#              </ul>#}
+{#            </li>#}
+{#            <li><a href="{% url 'blog' %}">بلاگ</a></li>#}
+{#            <li><a href="{% url 'contact' %}">ارتباط با ما</a></li>#}
+{#            <li><a href="{% url 'intern' %}">پذیرش کارآموز</a></li>#}
+{#            <li><a href="{% url 'about-us' %}">درباره چشم یار</a></li>#}
+{#          </ul>#}
+{##}
+{##}
+{#        </div>#}
+{#        <!-- <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">ورود / عضویت</a> -->#}
+{#            <a href="#" id="search-icon">#}
+{#              <i class="fa fa-lg fa-user">#}
+{#              </i>#}
+{#              |#}
+{#            </a>#}
+{#            <a href="#" id="search-icon">#}
+{#              <i class="fa fa-lg fa-search">#}
+{#              </i>#}
+{#            </a>#}
+{#        </div>#}
+{##}
+{#        <!--/.nav-collapse -->#}
+{#      <!-- </div> -->#}
+{#    </nav>#}
+      <nav class="navbar navbar-expand-lg navbar-light navbar-default">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand d-flex" href="/">
+         <img id="logo2" class="me-2" style="margin-top: 0;" src="{% static 'images/Cheshmyar/logo-white.png' %}" alt="logo">
+        <div class="text-center" href="/" dideo-checked="true">
+           <div id="motto">وضوح دید بیشتر با</div>
+           <div id="span-first">چشم یار</div>
+        </div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item active position-relative">
+          <a class="nav-link" aria-current="page" href="#">صفحه اصلی</a>
+        </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                وب سرویس ها
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'eye-care' %}">سلامت چشم</a></li>
+                  <li><a class="dropdown-item" href="{% url 'virtual-glass' %}">عینک مجازی</a></li>
+                  <li><a class="dropdown-item" href="{% url 'info-dashboard' %}">داشبورد اطلاعاتی</a></li>
+              </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog' %}">بلاگ</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">ارتباط با ما</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'intern' %}">پذیرش کارآموز</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'about-us' %}">درباره چشم یار</a>
+        </li>
+      </ul>
+    </div>
+
+
+          <div class="d-flex box-content-fit">
+          <a id="person-icon" type="button" data-bs-target="#login-form" href="#" dideo-checked="true" data-bs-toggle="modal">
+              <i class="fa fa-lg fa-user">
+              </i>
+              |
+          </a>
+            <a href="#"  id="search-icon" class="me-auto">
+              <i class="fa fa-lg fa-search">
+              </i>
+            </a>
+        </div>
+  </div>
+</nav>
+
+  </section>
+
+  <!-- END MENU --> 
+
+  <!-- Start slider -->
+  <section id="slider">
+    <div class="main-slider">
+      <div class="single-slide">
+        <img src="{% static 'images/Cheshmyar/eye1.jpg' %}" alt="img">
+        <div class="slide-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="slide-article">
+{#                    <img style="width: 20px; height: 290px; float: right; margin-left: 10px;" src="{% static 'images/Cheshmyar/right.png' %}" alt="image">#}
+                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                      <span style="background: -webkit-linear-gradient(left, rgba(6,57,110,1) 0%, rgba(43,205,193,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">چشم یار</span>
+                  </h1>
+                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">تشخیص بیماری های چشمی تنها با یک کلیک</p>
+                  <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="{% url 'eye-care' %}">مشاهده بیشتر</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="slider-img wow fadeInUp">
+{#                  <img src="{% static 'images/Cheshmyar/logo.png' %}" alt="Logo" style="width: 750px;">#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-slide">
+        <img src="{% static 'images/Cheshmyar/GettyImages-684066560.jpg' %}" alt="img">
+        <div class="slide-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="slide-article">
+{#                    <img style="width: 20px; height: 290px; float: right; margin-left: 10px;" src="{% static 'images/Cheshmyar/right.png' %}" alt="image">#}
+                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                      <span style="background: -webkit-linear-gradient(left, rgba(6,57,110,1) 0%, rgba(43,205,193,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">چشم یار</span>
+                  </h1>
+                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">انتخاب عینک مناسب چهره به صورت آنلاین</p>
+                  <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="{% url 'virtual-glass' %}">مشاهده بیشتر</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="slider-img wow fadeInUp">
+{#                  <img src="{% static 'images/Cheshmyar/logo.png' %}" alt="Logo" style="width: 750px;">#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-slide">
+        <img src="{% static 'images/Cheshmyar/DASHBOARDING COVER.png' %}" alt="img">
+        <div class="slide-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="slide-article">
+{#                    <img style="width: 20px; height: 290px; float: right; margin-left: 10px;" src="{% static 'images/Cheshmyar/right.png' %}" alt="image">#}
+                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                      <span style="background: -webkit-linear-gradient(left, rgba(6,57,110,1) 0%, rgba(43,205,193,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">چشم یار</span>
+                  </h1>
+                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">داشبورد اطلاعاتی سلامت چشم</p>
+                  <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="{% url 'info-dashboard' %}">مشاهده بیشتر</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="slider-img wow fadeInUp">
+{#                  <img src="{% static 'images/Cheshmyar/logo.png' %}" alt="Logo" style="width: 750px;">#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End slider -->
+
+  <!-- Start Pricing table -->
+  <section id="pricing-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">سرویس های ما</h2>
+            <span class="line"></span>
+{#            <p>گروه چشم یار سرویس های مختلفی را بر بستر وب ارائه می کند.</p>#}
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- start -->
+      <div class="service-cards-wrapper">
+      <div class="card-grid-space">
+          <!-- <div class="num">01</div> -->
+          <a class="service-card" href="{% url 'eye-care' %}" style="--bg-img: url({% static 'Services/eyecare.jpeg' %})">
+            <div>
+              <h1>سلامت چشم</h1>
+              <p>Eye Care</p>
+              <!-- <div class="date">6 Oct 2017</div> -->
+              <div class="tags">
+                <div class="tag">مشاهده بیشتر</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-grid-space">
+          <!-- <div class="num">02</div> -->
+          <a class="service-card" href="{% url 'info-dashboard' %}" style="--bg-img: url({% static 'Services/dashboard.jpeg' %})">
+            <div>
+              <h1>داشبورد اطلاعات</h1>
+              <p>Infographic Dashboard</p>
+              <!-- <div class="date">9 Oct 2017</div> -->
+              <div class="tags">
+                <div class="tag">مشاهده بیشتر</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-grid-space">
+          <!-- <div class="num">03</div> -->
+          <a class="service-card" href="{% url 'virtual-glass' %}" style="--bg-img: url({% static 'Services/virtual.webp' %})">
+            <div>
+              <h1>عینک مجازی</h1>
+              <p>Virtual Glass</p>
+              <!-- <div class="date">14 Oct 2017</div> -->
+              <div class="tags">
+                <div class="tag">مشاهده بیشتر</div>
+              </div>
+            </div>
+          </a>
+        </div>
+          </div>
+      <!-- end -->
+
+{#      <!-- start -->#}
+{#                <div class="content">#}
+{#                    <!-- card -->#}
+{#                    <div class="card">#}
+{##}
+{#                          <div class="icon"><img src="{% static 'Cards/glasses.png' %}" alt="glasses"></div>#}
+{#                          <p class="title">انتخاب عینک</p>#}
+{#                          <p class="text">عینک خود را به صورت آنلاین انتخاب کنید</p>#}
+{##}
+{#                    </div>#}
+{#                    <!-- end card -->#}
+{#                    <!-- card -->#}
+{#                    <div class="card">#}
+{##}
+{#                          <div class="icon"><img src="{% static 'Cards/eye.png' %}" alt="eye"></div>#}
+{#                          <p class="title">تشخیص بیماری های چشم</p>#}
+{#                          <p class="text">تشخیص بیماری های چشم در کوتاه ترین زمان ممکن</p>#}
+{##}
+{#                    </div>#}
+{#                    <!-- end card -->#}
+{#                    <!-- card -->#}
+{#                    <div class="card">#}
+{##}
+{#                          <div class="icon"><img src="{% static 'Cards/glasses.png' %}" alt="glasses"></div>#}
+{#                          <p class="title">سرویس سوم</p>#}
+{#                          <p class="text">توضیحات سرویس سوم</p>#}
+{##}
+{#                    </div>#}
+{#                    <!-- end card -->#}
+{#                    <!-- card -->#}
+{#                    <div class="card">#}
+{##}
+{#                       <div class="icon"><img src="{% static 'Cards/eye.png' %}" alt="eye"></div>#}
+{#                       <p class="title">سرویس چهارم</p>#}
+{#                       <p class="text">توضیحات سرویس چهارم</p>#}
+{##}
+{#                    </div>#}
+{#                    <!-- end card -->#}
+{#                </div>#}
+{#                <!-- end -->#}
+  </section>
+  <!-- End Pricing table -->
+
+  <!-- Start Feature -->
+  <section id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">ویژگی ها</h2>
+            <span class="line"></span>
+            <p>گروه چشم یار ویژگی هایی دارد که آن را از سایر رقبا متمایز می کند.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="feature-content">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-leaf feature-icon"></i>
+                  <h4 class="feat-title">مدل های به روز هوش مصنوعی</h4>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-tablet fa-5x feature-icon"></i>
+                  <h4 class="feat-title">کاربری راحت برای عموم</h4>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-thumbs-o-up feature-icon"></i>
+                  <h4 class="feat-title">بیشترین دقت در آزمون دقت</h4>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-gears feature-icon"></i>
+                  <h4 class="feat-title">خاص سازی ویژگی های مورد نظر</h4>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-lightbulb-o fa-3x feature-icon"></i>
+                  <h4 class="feat-title">قابلیت توسعه مدل و هوشمندسازی بیشتر</h4>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-smile-o feature-icon"></i>
+                  <h4 class="feat-title">سرعت پاسخ گویی بالا</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Feature -->
+
+  <!-- Start about  -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">درباره ما</h2>
+            <span class="line"></span>
+            <p>مجموعه چشم یار در حال حاضر یک استارتاپ در حوزه هوش مصنوعی و سلامت چشم هست؛ ما می خواهیم تا سلامت چشم را براساس مجموعه فناوری های کاربردی در حوزه هوش مصنوعی بهبود بخشیم. درحال حاضر برروی مجموعه تکنیک های پردازش تصویر و سایر روش های یادگیری ماشین کار می کنیم.</p>
+          </div>
+        </div>
+          <!--
+        <div class="col-md-12">
+          <div class="about-content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="our-skill">
+                  <h3>ابزار ما</h3>
+                  <div class="our-skill-content">
+                  <p>ما از زبان برنامه نویسی پایتون و کتابخانه های پرکاربرد استفاده می کنیم.</p>
+                    <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="100">
+                        <span class="progress-title">Python</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="70">
+                        <span class="progress-title">Django</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="60">
+                        <span class="progress-title">OpenCV</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="40">
+                        <span class="progress-title">TensorFlow</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="40">
+                        <span class="progress-title">Scikit</span>
+                      </div>
+                  </div>
+                   <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="25">
+                        <span class="progress-title">Pytorch</span>
+                      </div>
+                  </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="why-choose-us">
+                  <h3>چرا انتخاب ما؟</h3>
+                  <div class="panel-group why-choose-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          پیشتاز در عرصه <span class="fa fa-minus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+{#                        <!-- <img class="why-choose-img" src="assets/images/testi3.jpg" alt="img"> -->#}
+                         <p>ما مفتخریم که اعلام کنیم برای اولین بار در کشور این کار را انجام می دهیم و در این عرصه پیشتاز هستیم.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default ">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            استفاده از تکنولوژی برتر دنیا<span class="fa fa-plus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         <p>ما از به روز ترین و پرکاربرد ترین کتابخانه ها و زبان های برنامه نویسی در جهان استفاده می کنیم .</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            پشتیبانی عالی<span class="fa fa-plus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         <p>ما یک تیم پشتیبانی ما در هر ساعت از شبانه روز آماده خدمت رسانی و پاسخگویی به سوالات شما در اسرع وقت هستند.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- end about -->
+
+  <!-- Start Tools -->
+  <section id="home_work" class="home_work">
+        <div class="container">
+            <div class="title-area" style="margin-top: 50px;">
+                <h2 class="title">ابزار ما</h2>
+                <span class="line"></span>
+{#            <p></p>#}
+            </div>
+            <div class="row">
+                    <div class="col-md-3">
+                        <div class="single_work text-center extra-none">
+                            <div class="work_icon hover_pulse">
+                               <span style="font-size: 40px;">
+                                   Django
+{#                                   <img src="{% static 'tools/django.png' %}" alt="Keras">#}
+                               </span>
+                            </div>
+                            <div style="display: flex">
+                                <div style="flex: 1.17; text-align: end">
+                                    <div class="counter-no counter" style="font-size: 55px;color: #2828a0;font-family: cursive;">70</div>
+{#                                    <h3 class="title">Django</h3>#}
+                                </div>
+
+                                <div style="flex: 1; text-align: start; font-family: cursive; font-size: 53px;color: #2828a0;">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_work text-center ">
+                            <div class="work_icon hover_pulse">
+                               <span style="font-size: 40px;">
+                                   OpenCV
+{#                                   <img src="{% static 'tools/opencv.png' %}" alt="mxnet">#}
+                               </span>
+                            </div>
+                            <div style="display: flex">
+                                <div style="flex: 1.17; text-align: end">
+                                    <div class="counter-no counter" style="font-size: 55px;color: #2828a0;font-family: cursive;">60</div>
+{#                                    <h3 class="title">Django</h3>#}
+                                </div>
+
+                                <div style="flex: 1; text-align: start; font-family: cursive; font-size: 53px;color: #2828a0;">%</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_work text-center ">
+                            <div class="work_icon hover_pulse">
+                               <span style="font-size: 40px;">
+                                   TensorFlow
+{#                                   <img src="{% static 'tools/tensorflow.png' %}" alt="Tensorflow">#}
+                               </span>
+                            </div>
+                            <div style="display: flex">
+                                <div style="flex: 1.17; text-align: end">
+                                    <div class="counter-no counter" style="font-size: 55px;color: #2828a0;font-family: cursive;">60</div>
+{#                                    <h3 class="title">Django</h3>#}
+                                </div>
+
+                                <div style="flex: 1; text-align: start; font-family: cursive; font-size: 53px;color: #2828a0;">%</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single_work text-center ">
+                            <div class="work_icon hover_pulse">
+                               <span style="font-size: 40px;">
+                                   Python
+{#                                   <img src="{% static 'tools/python.png' %}" alt="Python">#}
+                               </span>
+                            </div>
+                            <div style="display: flex">
+                                <div style="flex: 1.17; text-align: end">
+                                    <div class="counter-no counter" style="font-size: 55px;color: #2828a0;font-family: cursive;">100</div>
+{#                                    <h3 class="title">Django</h3>#}
+                                </div>
+
+                                <div style="flex: 1; text-align: start; font-family: cursive; font-size: 53px;color: #2828a0;">%</div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+  <!-- End Tools -->
+
+
+
+
+  <!-- Start counter -->
+  <section id="counter">
+    <div class="counter-overlay">
+      <div id="partner-title">
+        <h1 align="center" style="margin-top: 0">همکاران ما</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="counter-area">
+              <div class="row">
+                <!-- Start single counter -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <div class="single-counter">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/Cheshmyar/Sharif.png' %}" width="150" height="150" alt="Sharif">
+                    </div>
+
+                    <div class="counter-label">
+                      دانشگاه صنعتی شریف
+                    </div>
+                  </div>
+                </div>
+                <!-- End single counter -->
+                <!-- Start single counter -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <div class="single-counter">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/Cheshmyar/Modarres.png' %}" width="150" height="150" alt="Modarres">
+                    </div>
+
+                    <div class="counter-label">
+                      دانشگاه تربیت مدرس
+                    </div>
+                  </div>
+                </div>
+                <!-- End single counter -->
+                <!-- Start single counter -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <div class="single-counter">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/Cheshmyar/Tehran.png' %}" width="150" height="150" alt="Tehran">
+                    </div>
+
+                    <div class="counter-label">
+                      دانشگاه تهران
+                    </div>
+                  </div>
+                </div>
+                <!-- End single counter -->
+                <!-- Start single counter -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <div class="single-counter">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/Cheshmyar/Diba.png' %}" width="150" height="150" alt="Diba">
+                    </div>
+
+                    <div class="counter-label">
+                      چشم پزشکی دیبا
+                    </div>
+                  </div>
+                </div>
+                <!-- End single counter -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End counter -->
+
+
+{#  <!-- Start Service -->#}
+{#  <section id="service">#}
+{#    <div class="container">#}
+{#      <div class="row">#}
+{#        <div class="col-md-12">#}
+{#          <div class="title-area">#}
+{#            <h2 class="title">سرویس های ما</h2>#}
+{#            <span class="line"></span>#}
+{#            <p>گروه چشم یار سرویس های مختلفی را بر بستر وب ارائه می کند.</p>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-md-12">#}
+{#          <div class="service-content">#}
+{#            <div class="row">#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-desktop service-icon"></i>#}
+{#                  <h4 class="service-title">توسعه دهنده وب</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-paw service-icon"></i>#}
+{#                  <h4 class="service-title">طراحی دیجیتال</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-magic service-icon"></i>#}
+{#                  <h4 class="service-title">فروشگاه</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-shopping-cart service-icon"></i>#}
+{#                  <h4 class="service-title">تجارت الکترونیکی</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-mobile service-icon"></i>#}
+{#                  <h4 class="service-title">توسعه دهنده نرم افزار</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#              <!-- Start single service -->#}
+{#              <div class="col-md-4 col-sm-6">#}
+{#                <div class="single-service wow zoomIn">#}
+{#                  <i class="fa fa-rocket service-icon"></i>#}
+{#                  <h4 class="service-title">سئو</h4>#}
+{#                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنام.</p>#}
+{#                </div>#}
+{#              </div>#}
+{#              <!-- End single service -->#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+{#  <!-- End Service -->#}
+
+
+
+  <!-- Start Pricing table -->
+  <section id="our-team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">تیم ما</h2>
+            <span class="line"></span>
+            <p>حرفه ای ترین ها دور هم گرد آمدیم تا برای یک هدف بزرگ در حوزه سلامت چشم نقش ایفا کنیم.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="our-team-content">
+            <div class="row">
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/1.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>محمد جواد احمدی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+                <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/2.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>پویا شایگان پیروز</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/3.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>غزال نظردنیوی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/4.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>بزرگمهر ضیاء</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+
+            </div>
+          </div>
+            <div class="our-team-content">
+            <div class="row">
+                <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/5.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>محمد رضا عزیزی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/9.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>نازنین شهابی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/6.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>ریحانه هاشمی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/7.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>فائزه عباسی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+
+            </div>
+          </div>
+            <div class="our-team-content">
+            <div class="row">
+                <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/8.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>بهاره علی پور</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+                <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/10.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>آرمین احمدی</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+              <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/man.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>جای اسم شما در تیم ما خالیست</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+                <!-- Start single team member -->
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-team-member">
+                 <div class="team-member-img">
+                   <img src="{% static 'images/Cheshmyar/Personal/woman.jpg' %}" alt="team member img">
+                 </div>
+                 <div class="team-member-name">
+                   <p>جای اسم شما در تیم ما خالیست</p>
+{#                   <span>سئوکار</span>#}
+                 </div>
+{#                 <p></p>#}
+                 <div class="team-member-link">
+                   <a href="#"><i class="fa fa-envelope"></i></a>
+                 </div>
+                </div>
+              </div>
+              <!-- Start single team member -->
+
+              <!-- Start single team member -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Pricing table -->
+  
+  <!-- Start Testimonial section -->
+{#  <section id="testimonial">#}
+{#    <div class="container">#}
+{#      <div class="row">#}
+{#        <div class="col-md-12">#}
+{#          <div class="row">#}
+{#            <div class="col-md-12">#}
+{#              <div class="title-area">#}
+{#                <h2 class="title">مشتریان چه می گویند؟</h2>#}
+{#                <span class="line"></span>           #}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="col-md-12">#}
+{#              <!-- Start testimonial slider -->#}
+{#              <div class="testimonial-slider">#}
+{#                <!-- Start single slider -->#}
+{#                <div class="single-slider">#}
+{#                  <div class="testimonial-img">#}
+{#                    <img src="{% static 'images/testi3.jpg' %}" alt="testimonial image">#}
+{#                  </div>#}
+{#                  <div class="testimonial-content">#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کا.</p>#}
+{#                    <h6>نام شخص، <span>مدیر سایت</span></h6>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <!-- Start single slider -->#}
+{#                <div class="single-slider">#}
+{#                  <div class="testimonial-img">#}
+{#                    <img src="{% static 'images/testi3.jpg' %}" alt="testimonial image">#}
+{#                  </div>#}
+{#                  <div class="testimonial-content">#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کا.</p>#}
+{#                    <h6>نام شخص، <span>مدیر سایت</span></h6>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <!-- Start single slider -->#}
+{#                <div class="single-slider">#}
+{#                  <div class="testimonial-img">#}
+{#                    <img src="{% static 'images/testi3.jpg' %}" alt="testimonial image">#}
+{#                  </div>#}
+{#                  <div class="testimonial-content">#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کا.</p>#}
+{#                    <h6>نام شخص، <span>مدیر سایت</span></h6>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-md-6"></div>        #}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+{#  <!-- End Testimonial section -->#}
+
+  <!-- Start Clients brand -->
+{#  <section id="clients-brand">#}
+{#    <div class="container">#}
+{#      <div class="row">#}
+{#        <div class="col-md-12">#}
+{#          <div class="clients-brand-area">#}
+{#            <ul class="clients-brand-slide">#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/amazon.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/discovery.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/envato.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/tuenti.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#               <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/amazon.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/discovery.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/envato.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#              <li class="col-md-3">#}
+{#                <div class="single-brand">#}
+{#                  <img src="{% static 'images/tuenti.png' %}" alt="img">#}
+{#                </div>#}
+{#              </li>#}
+{#            </ul>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+  <!-- End Clients brand -->
+
+  <!-- Start blog archive -->
+  <section id="blog-archive">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="title-area">
+                <h2 class="title">بلاگ</h2>
+                <span class="line"></span>
+                <p>آخرین اخبار دنیای تکنولوژی</p>
+            </div>
+          <div class="blog-archive-area">
+            <div class="row blog-container">
+                  {% for post in posts %}
+              <div class="col-md-4 col-xs-10">
+                <div class="card">
+                  <div class="card__header">
+                    <img src="{{ post.photo.url }}" alt="card__image" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="blog-tag tag-blue">هوش مصنوعی</span>
+                    <h4>{{ post.title }}</h4>
+                    <p style="text-align: justify">{{ post.text|slice:":80" }}...</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+{#                      <img src="{% static 'Blog/40.jfif' %}" alt="user__image" class="user__image">#}
+                      <div class="user__info">
+                        <h5>{{ post.author }}</h5>
+{#                        <small>دیروز</small>#}
+                      </div>
+                      <button id="more-card-btn"><a style="text-decoration: none" href="{% url 'blog-single' post_title=post.title %}">مشاهده بیشتر</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End blog archive -->
+
+  <!-- Start subscribe us -->
+  <section id="subscribe">
+    <div class="subscribe-overlay">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <div class="subscribe-area">
+              <h2 class="wow fadeInUp">عضویت در خبرنامه</h2>
+              <form action="" class="subscrib-form wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                <input type="text" placeholder="ایمیل خود را وارد کنید...">
+                <button class="subscribe-btn" type="submit">ثبت</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End subscribe us -->
+
+  <!-- Start footer -->
+  <footer id="footer">
+    <div class="container">
+        <div class="row" style="margin-right: 10px; margin-left: 10px;">
+            <img referrerpolicy='origin' id = 'nbqeoeukjzpejxlzrgvjesgt' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=287130&p=uiwkmcsijyoerfthxlaoobpd", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=287130&p=odrfaqgwyndtnbpdqftilyma' />
+        </div>
+      <div class="row" style="margin-right: 10px; margin-left: 10px;">
+        <div class="col-md-4 col-sm-4">
+          <div class="footer-left">
+              <p>تمامی حقوق این وب سایت متعلق به گروه چشم یار است</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="footer-left">
+              <p>آدرس : تهران-سعادت آباد-خیابان ایثارگران شمال-پلاک 47 | تلفن : 02126744186 - 02126744215</p>
+
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <div class="footer-right">
+            <a href="http://wa.me/989379788868"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/chashmyar.ir?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer -->
+  <!-- Start login modal window -->
+  <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+    <div class="modal-dialog">
+      <!-- Start login section -->
+      <div id="login-content" class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>ورود</h4>
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="{% url 'dashboard' %}">
+              {% csrf_token %}
+            <div class="form-group">
+              <input name="username" type="text" placeholder="نام کاربری" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" placeholder="رمز عبور" class="form-control">
+            </div>
+             <div class="loginbox">
+              <label><input type="checkbox"><span>بخاطر بسپار</span></label>
+              <button class="btn signin-btn" type="submit">وارد شو</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer footer-box">
+{#          <a href="#">رمز عبور را فراموش کردید؟</a>#}
+          <span>حساب ندارید؟ <a id="signup-btn" href="#">عضو شوید.</a></span>
+        </div>
+      </div>
+      <!-- Start signup section -->
+      <div id="signup-content" class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"><i class="fa fa-lock"></i>عضویت</h4>
+           <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="{% url 'dashboard' %}">
+              {% csrf_token %}
+            <div class="form-group">
+              <input name="name" placeholder="نام" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="username" placeholder="نام کاربری" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="ایمیل" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" placeholder="رمز عبور" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="confirm-password" type="password" placeholder="تکرار رمز عبور" class="form-control">
+            </div>
+            <div class="signupbox">
+              <span>حساب دارید؟ <a id="login-btn" href="#">وارد شوید.</a></span>
+            </div>
+            <div class="loginbox">
+              <label><input type="checkbox"><span>بخاطر بسپار</span><i class="fa"></i></label>
+              <button class="btn signin-btn" type="submit">عضویت</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End login modal window -->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Bootstrap -->
+  <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+{#  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>#}
+{#  <script src="{% static 'js/bootstrap.js' %}"></script>#}
+  <!-- Slick Slider -->
+  <script type="text/javascript" src="{% static 'js/slick.js' %}"></script>
+  <!-- mixit slider -->
+  <script type="text/javascript" src="{% static 'js/jquery.mixitup.js' %}"></script>
+  <!-- Add fancyBox -->
+  <script type="text/javascript" src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+ <!-- counter -->
+  <script src="{% static 'js/waypoints.js' %}"></script>
+  <script src="{% static 'js/jquery.counterup.js' %}"></script>
+  <!-- Wow animation -->
+  <script type="text/javascript" src="{% static 'js/wow.js' %}"></script>
+  <!-- progress bar   -->
+  <script type="text/javascript" src="{% static 'js/bootstrap-progressbar.js' %}"></script>
+
+
+  <!-- Custom js -->
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+
+  <link rel="canonical" href="http://www.bistscript.ir" />
+</html>
